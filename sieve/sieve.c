@@ -1,7 +1,9 @@
 #include "sieve.h"
 
-void initialize_sieve(int N){    
-    int marks[N] = {1};    
+void initialize_sieve(int N){
+    int marks[N];
+    for(int i=0; i< N; i++)
+        marks[i]= 1;
 }
 
 void mark_primes(int marks[], int N)
