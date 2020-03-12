@@ -21,14 +21,13 @@ void bst_free_all(Bst* tree)
 void bst_add_new_key(int key, Bst* root)
 {
     if(root == NULL) return;
-    // else if(root -> node_left == NULL && root -> node_right == NULL) root -> key = key;
     else if(key < root -> key)
     {
         if(root -> node_left == NULL)
         {
             root -> node_left = bst_add_node(key);
-        } else bst_add_new_key(key,root -> node_left);        
-    } 
+        } else bst_add_new_key(key,root -> node_left);
+    }
     else if (key > root -> key)
     {
         if(root -> node_right == NULL)
@@ -50,7 +49,7 @@ Bst* bst_create_empty()
 void bst_print(Bst* root)
 {
     printf("<");
-    if(root !=NULL)
+    if(root != NULL)
     {
         printf("%d",root->key);
         bst_print(root->node_left);

@@ -3,6 +3,8 @@
 
 int main(int argc, char* argv[])
 {
-    int N = argv[argc-1];
-    initialize_sieve(N);
+    int N = 100;
+    int* marks = initialize_sieve(N);
+    mark_primes(marks, N);
+    print_sieve(marks,N);
 }
